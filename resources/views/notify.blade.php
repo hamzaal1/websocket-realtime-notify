@@ -17,6 +17,12 @@
 <body class="antialiased">
     <h1>Test Laravel Broadcast</h1>
 
+    <form action="" method="POST">
+        @csrf
+        <input type="text" name="message" id="">
+        <button>submit</button>
+    </form>
+
     <script src="{{ mix('resources/js/jquery-3.7.1.min.js') }}"></script>
     <script type="module" src="{{ mix('resources/js/laravelEchoSetup.js') }}"></script>
 

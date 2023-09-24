@@ -2,14 +2,13 @@
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
 
-
 Pusher.logToConsole = true;
 
-var pusher = new Pusher('951bfa99f081c703f469', {
-  cluster: 'eu'
+var pusher = new Pusher('c3f1b7312e4adfa74e7f', {
+  cluster: 'ap1'
 });
 
 var channel = pusher.subscribe('notification-channel');
-channel.bind('new-notify', function(data) {
-  console.log(data);;
+channel.bind('new-notify', function (data) {
+  alert(JSON.stringify(data));
 });
